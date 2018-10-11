@@ -29,37 +29,40 @@ public class NumberofIslands_200 {
                 {
                     queue.add(new Integer[]{i,j});
                     grid[i][j] = '0';
-                    while(queue.size()>0) 
-                    {
-                        Integer[] temp = queue.remove();
-                        int a = temp[0];
-                        int b= temp[1];
-                        
-                        if( a+1 < m && grid[a+1][b] == '1')
-                        {
-                            queue.add(new Integer[]{a+1, b});
-                            grid[a+1][b] = '2';
-                        }
-                        if( b+1 < n && grid[a][b+1] == '1')
-                        {
-                            queue.add(new Integer[]{a, b+1});
-                            grid[a][b+1] = '2';
-                        }
-                        if( a-1 >= 0 && grid[a-1][b] == '1')
-                        {
-                            queue.add(new Integer[]{a-1, b});
-                            grid[a-1][b] = '2';
-                        }
-                        if( b-1 >= 0 && grid[a][b-1] == '1')
-                        {
-                            queue.add(new Integer[]{a, b-1});
-                            grid[a][b-1] = '2';
-                        }
-                    }
+
                     res++;
                 }
             }
         }
+        
+        while(queue.size()>0) 
+        {
+            Integer[] temp = queue.remove();
+            int a = temp[0];
+            int b= temp[1];
+
+            if( a+1 < m && grid[a+1][b] == '1')
+            {
+                queue.add(new Integer[]{a+1, b});
+                grid[a+1][b] = '2';
+            }
+            if( b+1 < n && grid[a][b+1] == '1')
+            {
+                queue.add(new Integer[]{a, b+1});
+                grid[a][b+1] = '2';
+            }
+            if( a-1 >= 0 && grid[a-1][b] == '1')
+            {
+                queue.add(new Integer[]{a-1, b});
+                grid[a-1][b] = '2';
+            }
+            if( b-1 >= 0 && grid[a][b-1] == '1')
+            {
+                queue.add(new Integer[]{a, b-1});
+                grid[a][b-1] = '2';
+            }
+        }
+        
         return res;
     }
 
