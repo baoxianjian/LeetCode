@@ -31,8 +31,8 @@ public class StringInt {
 
         // TODO code application logic here
         StringInt lt =new StringInt();
-        //lt.twoSumTest();
-        //long result=lt.reverse(1534236469);
+        lt.twoSumTest();
+        long result=lt.reverse(1534236469);
          //System.out.println(result);
          //lt.myPow3(1, -2147483648);
          //lt.isPalindromeTest();
