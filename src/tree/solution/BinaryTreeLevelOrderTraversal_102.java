@@ -2,6 +2,7 @@ package tree.solution;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -22,10 +23,10 @@ public class BinaryTreeLevelOrderTraversal_102 {
     public static void main(String[] args)
     {
         BinaryTree<Integer> bt = new BinaryTree<Integer>();
-//        bt.insertRoot(1);
-//        BinaryNode<Integer> a = bt.insertChild(bt.root, 2, true);
-//        BinaryNode<Integer> b = bt.insertChild(bt.root, 3, false);
-//        BinaryNode<Integer> c = bt.insertChild(a, 4, true);
+        bt.insertRoot(1);
+        BinaryNode<Integer> a = bt.insertChild(bt.root, 2, true);
+        BinaryNode<Integer> b = bt.insertChild(bt.root, 3, false);
+        BinaryNode<Integer> c = bt.insertChild(a, 4, true);
         
         levelOrder(bt.root);
         
