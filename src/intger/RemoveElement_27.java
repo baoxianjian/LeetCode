@@ -8,7 +8,7 @@ package intger;
 import java.util.Arrays;
 
 /**
- * 拿后面的数来补就行了, 补上的数（可能相同）也要重新判断，所以i--,
+ * 拿后面的数来补就行了, 补上的数（可能相同）也要重新判断，所以i--
  * Note that the order of those five elements can be arbitrary.
  * @author baoge
  */
