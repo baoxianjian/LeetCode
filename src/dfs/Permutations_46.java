@@ -19,6 +19,7 @@ public class Permutations_46 {
     
     public static void robot(int idx, int[] nums)
     {
+        //定位到循环的最后一层
         if (idx >= nums.length) {
             List<Integer> tmp = new ArrayList<Integer>();
             for(int i=0; i<nums.length; i++) {
@@ -28,10 +29,13 @@ public class Permutations_46 {
             return;
         }
         for(int i=0; i<nums.length; i++) {
+            //相当于i不等于j不等于k（假设三层）
             if(v[i] == false){
-                path[idx] = i;
+                path[idx] = i; //记录每一层的值
+                //若第一层用过，第二层就不再使用
                 v[i] = true;
                 robot(idx+1, nums);
+                //只跟层级（深度）有关系，下次循环依然可用
                 v[i] = false;
             }
         }
