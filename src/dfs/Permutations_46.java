@@ -29,6 +29,7 @@ public class Permutations_46 {
             return;
         }
         for(int i=0; i<nums.length; i++) {
+            //idx:deepth, i:breadth 
             //相当于i不等于j不等于k（假设三层）
             if(v[i] == false){
                 path[idx] = i; //记录每一层的值
