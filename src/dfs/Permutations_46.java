@@ -19,7 +19,7 @@ public class Permutations_46 {
     
     public static void robot(int idx, int[] nums)
     {
-        //¶¨Î»µ½Ñ­»·µÄ×îºóÒ»²ã
+        //å®šä½åˆ°å¾ªçŽ¯çš„æœ€åŽä¸€å±‚
         if (idx >= nums.length) {
             List<Integer> tmp = new ArrayList<Integer>();
             for(int i=0; i<nums.length; i++) {
@@ -29,13 +29,13 @@ public class Permutations_46 {
             return;
         }
         for(int i=0; i<nums.length; i++) {
-            //Ïàµ±ÓÚi²»µÈÓÚj²»µÈÓÚk£¨¼ÙÉèÈý²ã£©
+            //ç›¸å½“äºŽiä¸ç­‰äºŽjä¸ç­‰äºŽkï¼ˆå‡è®¾ä¸‰å±‚ï¼‰
             if(v[i] == false){
-                path[idx] = i; //¼ÇÂ¼Ã¿Ò»²ãµÄÖµ
-                //ÈôµÚÒ»²ãÓÃ¹ý£¬µÚ¶þ²ã¾Í²»ÔÙÊ¹ÓÃ
+                path[idx] = i; //è®°å½•æ¯ä¸€å±‚çš„å€¼
+                //è‹¥ç¬¬ä¸€å±‚ç”¨è¿‡ï¼Œç¬¬äºŒå±‚å°±ä¸å†ä½¿ç”¨
                 v[i] = true;
                 robot(idx+1, nums);
-                //Ö»¸ú²ã¼¶£¨Éî¶È£©ÓÐ¹ØÏµ£¬ÏÂ´ÎÑ­»·ÒÀÈ»¿ÉÓÃ
+                //åªè·Ÿå±‚çº§ï¼ˆæ·±åº¦ï¼‰æœ‰å…³ç³»ï¼Œä¸‹æ¬¡å¾ªçŽ¯ä¾ç„¶å¯ç”¨
                 v[i] = false;
             }
         }
