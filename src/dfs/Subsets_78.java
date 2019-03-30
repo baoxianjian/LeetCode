@@ -32,8 +32,8 @@ public class Subsets_78 {
     
     0--1--2
     |  |   
-    1  2
-    |
+    1--2
+    |2
     2
     //Loop + Recursive (row: loop,  col: recursive)
      */
