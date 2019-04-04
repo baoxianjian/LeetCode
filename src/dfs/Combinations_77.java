@@ -18,6 +18,7 @@ public class Combinations_77 {
     public static int K = 0;
     
     public static void dfs(int idx, int n, int k){
+        //限制在第k（2）层
         if(k == 0){
             List<Integer> tmp = new ArrayList<>();
             //执行两次，把上个level中的值和现在lelvel中的值加入tmp
@@ -55,7 +56,7 @@ public class Combinations_77 {
         return ans;
     }
     
-public static void main(String[] args)
+    public static void main(String[] args)
     {
         List<List<Integer>> list = new Combinations_77().combine(4, 2);
         System.out.println(list);
