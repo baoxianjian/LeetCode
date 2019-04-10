@@ -9,15 +9,13 @@ import java.util.Set;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ http://zxi.mytechroad.com/blog/graph/leetcode-399-evaluate-division/
  */
 
 /**
  *
  * @author xbao
  */
-// Author: Huahua
-// Running time: 74 ms
 class EvaluateDivision_399 {  
     Map<String, HashMap<String, Double>> g = new HashMap<>();
     Set<String> visited = new HashSet<String>();
@@ -67,7 +65,7 @@ class EvaluateDivision_399 {
         }
         return ans;
     }
-    //a b c
+    //a/c
 //    a
 //        b
 //            c
